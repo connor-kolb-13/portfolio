@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Page Name and Icon -->
+    <title>Connor Kolb</title>
+    <link rel="icon" href="personalLogo.png" type="image/x-icon" />
+    <!-- Bulma CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/8a80b728dc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Start Login Modal -->
+    <div class="modal" id="signInModal">
+      <div class="modal-background" id="signInModalBg"></div>
+      <div class="modal-content has-background-grey-light p-4">
+        <form id="loginform">
+          <h1 class="subtitle has-text-weight-bold is-3">Login</h1>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input
+                class="input"
+                type="email"
+                id="loginemail"
+                placeholder="e.g. alexsmith@wisc.edu"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Password</label>
+            <p class="control has-icons-left">
+              <input
+                class="input"
+                type="password"
+                id="loginpassword"
+                placeholder="Password"
+              />
+              <span class="icon is-small is-left m-auto">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+          <div class="container m-0 has-text-centered">
+            <!-- submit button -->
+            <button class="button is-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Login Modal -->
+
+    <!-- Column Layout -->
+    <div class="columns is-variable is-0 is-multiline mb-0">
+
+      <!-- Left Column -->
+      <div class="column is-full-mobile is-12-tablet is-5-desktop bg-blue is-centered has-text-centered px-3" >
+
+        <figure class="image mt-6 mb-6 mx-auto" style="width: 70%">
+          <img
+            class="is-rounded mx-auto"
+            src="cliffs.jpg"
+            style="width: 66%; height: auto"
+          />
+        </figure>
+        <h1
+          class="subtitle is-2 has-text-weight-bold font-eggshell mt-6"
+          style="font-family: 'Didot'"
+        >
+          Connor Kolb
+        </h1>
+        <div
+          class=" is-justify-content-center is-align-items-center my-3"
+        >
+          <i class="fa-solid fa-school font-eggshell"></i>
+          <span
+            class="subtitle is-5 has-text-weight-bold font-eggshell"
+            style="font-family: 'Optima'; margin-left: 0.5em"
+          >
+            University of Wisconsin-Madison Alum since December 2023
+          </span>
+        </div>
+        <div
+          class=" is-justify-content-center is-align-items-center my-3"
+        >
+          <i class="fa-solid fa-graduation-cap font-eggshell"></i>
+          <span
+            class="subtitle is-5 has-text-weight-bold font-eggshell"
+            style="font-family: 'Optima'; margin-left: 0.5em"
+          >
+            Majors - Information Systems & Finance, Investment & Banking
+          </span>
+        </div>
+        <div
+          class=" is-justify-content-center is-align-items-center my-3"
+        >
+          <i class="fa-solid fa-graduation-cap font-eggshell"></i>
+          <span
+            class="subtitle is-5 has-text-weight-bold font-eggshell"
+            style="font-family: 'Optima'; margin-left: 0.5em"
+          >
+            Certificate - Computer Science
+          </span>
+        </div>
+        <div
+          class=" is-justify-content-center is-align-items-center my-3"
+        >
+          <i class="fa-solid fa-location-dot font-eggshell"></i>
+          <span
+            class="subtitle is-5 has-text-weight-bold font-eggshell"
+            style="font-family: 'Optima'; margin-left: 0.5em"
+          >
+            West Palm Beach, FL
+          </span>
+        </div>
+        <!-- Navigation menu -->
+        <nav>
+          <ul>
+            <li
+              class="subtitle is-5 has-text-white is-clickable pt-6 py-2"
+              id="homeBtn"
+            >
+              HOME
+            </li>
+            <li
+              class="subtitle is-5 has-text-white is-clickable pb-2"
+              id="aboutBtn"
+            >
+              ABOUT
+            </li>
+            <li
+              class="subtitle is-5 has-text-white is-clickable pb-2"
+              id="skillsBtn"
+            >
+              SKILLS
+            </li>
+            <li
+              class="subtitle is-5 has-text-white is-clickable pb-2"
+              id="projectsBtn"
+            >
+              PROJECTS
+            </li>
+            <li
+              class="subtitle is-5 has-text-white is-clickable pb-2"
+              id="experienceBtn"
+            >
+              EXPERIENCE
+            </li>
+            <li
+              class="subtitle is-5 has-text-white is-clickable pb-2"
+              id="contactBtn"
+            >
+              CONTACT
+            </li>
+            <li
+              class="subtitle is-5 has-text-white is-clickable pb-2 is-hidden"
+              id="adminTab"
+            >
+              ADMIN
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Right Column -->
+      <div class="column is-full-mobile is-12-tablet is-7-desktop bg-silver p-6">
+
+        <!-- Home Container -->
+        <div class="container p-6" id="homeContainer">
+          <!-- Welcome & Image -->
+          <div class="columns is-desktop-only ">
+            <div class="column is-6">
+              <div class="title is-2 is-uppercase" style="font-family: 'Didot'">
+                Welcome,
+              </div>
+            </div>
+            <div class="column is-6">
+              <figure class="image mx-auto" style="width: 70%">
+                <img
+                  class="is-rounded mx-auto"
+                  src="personalLogo.png"
+                  style="width: 100%; height: auto"
+                />
+              </figure>
+            </div>
+          </div>
+          <!-- Moto -->
+          <div class="section">
+            <div class="has-text-centered my-2">
+              <div
+                class="subtitle is-2 my-1 mb-3"
+                style="font-family: 'Optima'"
+              >
+                Innovation is my Business,
+              </div>
+              <!-- <div class="subtitle is-3 my-1" style="font-family: 'Optima'">
+                and
+              </div> -->
+              <div class="subtitle is-2 my-1" style="font-family: 'Optima'">
+                Adventure is my Playground.
+              </div>
+            </div>
+          </div>
+          <!-- Adventure Pics -->
+          <div class="image-gallery">
+            <div class="columns is-desktop-only  is-vcentered">
+              <div class="column is-1"></div>
+              <div class="column is-4mr-5">
+                <figure class="image is-3by5">
+                  <img
+                    src="fishing.jpg"
+                    style="border-radius: 1.5rem"
+                    alt="Fishing"
+                  />
+                </figure>
+              </div>
+              <div class="column is-2"></div>
+              <div class="column is-4">
+                <figure class="image is-3by5">
+                  <img
+                    src="skiing.jpg"
+                    style="border-radius: 1rem"
+                    alt="Skiing"
+                  />
+                </figure>
+              </div>
+              <div class="column is-1"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Container -->
+        <div class="container p-6 is-hidden" id="aboutContainer">
+          <div class="title is-2 is-uppercase">About.</div>
+          <!-- Picture -->
+          <div class=" has-text-centered">
+            <figure class="image mx-auto" style="width: 50%">
+              <img
+                class="is-rounded mx-auto"
+                src="professional.jpeg"
+                style="width: 100%; height: auto"
+              />
+            </figure>
+          </div>
+          <!-- Synopsis -->
+          <div class="subtitle is-5 my-4 mt-6" style="font-family: 'Geneva'">
+            Hello! I'm a proud Brookfield, Wisconsin native and a recent
+            graduate from the University of Wisconsin-Madison, where I
+            cultivated a deep-rooted passion for technology and business.
+            Holding a Bachelor's degree in Business Administration, I
+            specialized in Information Systems and Finance, Investment &
+            Banking, complemented by a certificate in Computer Science. This
+            unique blend of education has equipped me with a holistic view of
+            the technological and financial landscapes. <br /><br />
+            As I step into the professional world, I am actively seeking
+            opportunities in Technology Consulting, Data Analytics, and other
+            IT-related fields. My goal is to leverage my academic background and
+            skills in a role that challenges me and allows for continuous
+            learning and growth. I am particularly interested in remote work
+            opportunities and remain open to relocation in the near future to
+            broaden my professional horizon.
+            <br /><br />
+            Outside of my professional interests, I cherish spending quality
+            time with my family and friends. I am an avid outdoor enthusiast,
+            with a passion for activities like fishing, skiing, golfing, and
+            camping. These pursuits not only offer me a chance to escape today's
+             busy world but also serve as a source of inspiration and rejuvenation.
+            <br /><br />
+            I am excited about the journey ahead and the opportunities to
+            contribute, learn, and grow in the dynamic field of technology and
+            business. Let's connect and explore how we can collaborate and drive
+            success together!
+          </div>
+        </div>
+
+        <!-- Skills Container -->
+        <div class="container p-6 is-hidden" id="skillsContainer">
+          <div class="title is-2 is-uppercase mb-6 pb-6">Skills.</div>
+          <div
+            id="wordCloud"
+            class="mt-6 pt-6"
+            style="width: 100%; height: 400px"
+          ></div>
+          <div class="section has-text-centered">
+            <figure class="image mx-auto" style="width: 70%">
+              <img
+                class="mx-auto is-clickable"
+                src="wordCloud.png"
+                style="width: 30%; height: auto"
+                onclick="genWordCloud()"
+              />
+            </figure>
+          </div>
+        </div>
+
+        <!-- Projects Container -->
+        <div class="container p-6 is-hidden" id="projectsContainer">
+          <div class="title is-2 is-uppercase">Projects.</div>
+
+          <!-- Donna Project -->
+          <div class="accordion-card">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                <img src="DonnaCircleColored.png" class="accordion-thumb" alt="Donna Icon" />
+                <h3 class="accordion-title">Donna – AI Assistant for Work & Life</h3>
+                <span class="accordion-icon">+</span>
+              </div>
+              <div class="accordion-body">
+                <p class="subtitle is-6 mt-3">
+                  Donna is a context-aware AI assistant that helps users manage scheduling, email, memory, and tasks through a natural chat and voice interface. Inspired by Donna Paulsen from <em>Suits</em>, this assistant goes beyond conversation — it takes action.
+                  <br /><br />
+                  ✅ <strong>Automation Architecture:</strong> GPT-4o + n8n (self-hosted on Docker), integrated with Redis/Postgres, handles complex flow orchestration and logic routing.
+                  <br /><br />
+                  ✅ <strong>Full Stack Memory:</strong> Firebase (auth, usage logging) and Notion (editable task memory) support real-time interactions and editable long-term memory.
+                  <br /><br />
+                  ✅ <strong>Scheduling Intelligence:</strong> Custom DST-aware date parser processes natural language like "next Friday at 6pm" and creates events in Outlook.
+                  <br /><br />
+                  ✅ <strong>Voice & Subscription (Planned):</strong> Whisper, ElevenLabs, and Stripe-based tiered subscriptions are planned next.
+                  <br /><br />
+                  ✅ <strong>iOS MVP:</strong> A working SwiftUI frontend deployed to TestFlight supports calendar creation through typed input.
+                  <br /><br />
+                  🔧 <strong>Tools Used:</strong> GPT-4o, n8n, Firebase, Notion API, Redis, Postgres, Docker, SwiftUI, Whisper (planned), ElevenLabs (planned)
+                  <br /><br />
+                  <a class="button yellow-cta" href="https://drive.google.com/file/d/1KbIl5i009WVhsycU1Ewg7JY2Gz-VnTH7/view?usp=sharing" target="_blank">
+                    View Full Scope
+                  </a>
+                </p>
+              </div>
+          </div>
+
+          <!-- Fishing Team -->
+          <div class="accordion-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <img src="fishingWebsite.png" class="accordion-thumb" alt="Fishing Site" />
+              <h3 class="accordion-title">Wisconsin Fishing Team Website</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-body">
+              <p class="subtitle is-6 mt-3">
+                This project began as a class assignment and grew into a full-scale tool for the Wisconsin Fishing Team. The public-facing site provides key info: officer bios, tournament schedule, contact form, apparel shop, and gallery. For members, it enables rod/boat reservations, sponsorship access, and secure login.<br /><br />
+                Admins can edit calendars, update shop inventory, and manage content. Built using HTML, JavaScript, CSS (Bulma), and Firebase for auth, hosting, and data. Also integrates with Square for ecommerce and uses Git for version control.
+                <br /><br />
+                <a class="button yellow-cta" href="https://wisconsin-fishing-team.web.app/index.html" target="_blank">Visit Live Site</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Georgia Sweets -->
+          <div class="accordion-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <img src="georgiaSweets.png" class="accordion-thumb" alt="Georgia Sweets" />
+              <h3 class="accordion-title">Georgia Sweets Bakery Website</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-body">
+              <p class="subtitle is-6 mt-3">
+                This bakery website was developed for a real business looking to upgrade from Facebook-based sales. We met weekly with the client to scope needs: digital catalog, mobile-first design, order management, and feedback forms. Each sprint involved revisions based on owner input.<br /><br />
+                Used HTML/CSS/JavaScript for UI, and Firebase for user auth, database storage, and hosting. Scrum methodology ensured speed and structure. Designed to be simple, secure, and scalable for long-term growth.
+                <br /><br />
+                <a class="button yellow-cta" href="https://georgia-sweets.web.app/" target="_blank">View Site</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- SpendSmart App -->
+          <div class="accordion-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <img src="app_icon.png" class="accordion-thumb" alt="SpendSmart App" />
+              <h3 class="accordion-title">SpendSmart – Android Finance App</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-body">
+              <p class="subtitle is-6 mt-3">
+                SpendSmart is an Android app that helps users track expenses, identify savings, and learn smart habits. Core features include receipt scanning (via ML Kit), data categorization, and interactive charts powered by MPAndroidChart.<br /><br />
+                Users can also join community chatrooms to share deals or tips. The UI was gamified to encourage frequent use and goal setting. Built in Android Studio using Java/XML with Firebase backend and camera APIs. Targeted toward students and early professionals.
+                <br /><br />
+                <a class="button yellow-cta" href="https://firebasestorage.googleapis.com/v0/b/connor-kolb-portfolio.appspot.com/o/SpendSmartFInalPoster.pdf?alt=media&token=4a140d32-7f7f-47be-8b7b-3c314b06186b" target="_blank">View Poster</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Data Olympians -->
+          <div class="accordion-card">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <img src="dataOlympians.png" class="accordion-thumb" alt="Olympics Data" />
+              <h3 class="accordion-title">Data Olympians – Data Analytics Project</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-body">
+              <p class="subtitle is-6 mt-3">
+                This team project explored Olympic history data using data science and analytics. We used Python (pandas, matplotlib), Tableau, and sentiment analysis with Twitter data to explore questions like: Which sports dominate? What are typical gold medal ages? Are medal trends region-based?<br /><br />
+                We also tested clustering models and drafted insights into athlete longevity and performance. Final report includes charts, predictive models, and discussion of missing data gaps and ethics. Available on request.
+                <br /><br />
+                <a class="button yellow-cta" href="mailto:c.kolb13@outlook.com">Request Full Report</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <!-- End Projects -->
+
+        <!-- Experience Container -->
+        <div class="container p-6 is-hidden" id="experienceContainer">
+            <div class="title is-2 is-uppercase">Experience.</div>
+            <!-- Work -->
+            <div class="subtitle is-3 mt-4" style="font-family: 'Optima'">Work</div>
+            <!-- Work #1 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-left">
+                  <figure class="image is-64x64">
+                    <img
+                    
+                      src="CapitalData.png"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong
+                        >Associate Architect - Capital Data</strong
+                      >
+                      <br/>
+                      <small>October 2024 – Present</small>
+                      <br />
+                      <ul>
+                        <li>Utilize PowerBI, LiveOptics, Visio, and Excel to conduct detailed analyses and visualizations of customer IT 
+                          environments. Develop comprehensive PowerPoint presentations that meticulously detail storage, compute, and 
+                          backup components, ensuring alignment with Capital Data's Data-Driven Architecture (DDA) process.
+                          </li>
+                        <li>Evaluate DDA process findings to identify optimal solutions utilizing my knowledge of Dell’s product lines and sizing 
+                          tools. Design precise configurations tailored to the customer’s environment using Dell’s configuration tools.
+                          </li>
+                        <li>Collaborate with inside sales and account representatives to obtain accurate pricing for custom solutions. Integrate 
+                          quotes into DDA presentations to clearly explain proposed solutions.</li>
+                      </ul> 
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- Work #2 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      
+                      <strong
+                      >Associate Architect Intern - Capital Data</strong
+                    >
+                    <br />
+                    <small>June 2024 – October 2024</small>
+                    
+                    <br/>
+                    
+                    <ul class="">
+                      <li>Completed extensive training through Pluralsight and Dell’s partner portal on critical IT concepts such as hardware, 
+                        operating systems, troubleshooting, and virtualization, enhancing my technical skills and project contributions.
+                        </li>
+                      <li>Participated in and documented both internal and external calls, gaining valuable insights into the consulting process, 
+                        including identifying requirements, employing probing questions, and building strong rapport and trust with clients.</li>
+                    </ul> 
+                    </p>
+                  </div>
+                </div>
+                <div class="media-right">
+                  <figure class="image is-64x64">
+                    <img
+                    
+                      src="CapitalData.png"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+              </article>
+            </div>
+            <!-- Work #3 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-left">
+                  <figure class="image is-64x64">
+                    <img
+                    
+                      src="recWell.png"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong
+                        >Student Lead - UW-Madison Recreation & Wellbeing</strong
+                      >
+                      <br/>
+                      <small>August 2022 – December 2023</small>
+                      <br />
+                      <ul>
+                        <li>Recruited, trained, scheduled, and evaluated 20 flag football officials required to run 6+ nightly intramural games.</li>
+                        <li>Coordinated six tournaments over five days that served 200+ participants competing in table tennis, golf, and more.</li>
+                        <li>Facilitated mentor/mentee program participation, events, and connections to promote integration of all employees.</li>
+                      </ul> 
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- Work #4 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                    
+                      <strong
+                      >Sports Programs Supervisor - UW-Madison Recreation & Wellbeing</strong
+                    >
+                    <br />
+                    <small>March 2021 – December 2023</small>
+                  
+                    <br/>
+                    
+                    <ul class="">
+                      <li>Managed intramural and sport club competitions to ensure smooth games and provide first aid or activate EMS.</li>
+                      <li>Served as liaison between participants, officials, and professional staff while being the primary responder to incidents.</li>
+                      <li>Officiated multiple sporting competitions to maintain standards of play and to certify that game rules were observed.</li>
+                    </ul> 
+                    </p>
+                  </div>
+                </div>
+                <div class="media-right">
+                  <figure class="image is-64x64">
+                    <img
+                  
+                      src="recWell.png"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+              </article>
+            </div>
+            <!-- Work #5 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-left">
+                  <figure class="image is-64x64">
+                    <img
+                    class="is-rounded"
+                      src="midwestCopacking.png"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong
+                      >Information Technology Intern - MidWest Co-Packing</strong
+                    >
+                    <br/>
+                    <small>May 2023 – August 2023</small>
+                    <br />
+                    <ul>
+                      <li>Facilitated data migration and implementation of MRPeasy, ensured accurate and seamless transition of critical 
+                        business data to the new manufacturing ERP system in addition to integration with current systems.
+                        </li>
+                      <li>Collaborated with President and consultant to identify business requirements and implement MRPeasy, aimed to 
+                        streamline inventory management, customer relationship management, procurement, and production planning.</li>
+                      <li>Assisted in user training sessions and created process documentation for MRPeasy, empowered employees to 
+                        effectively utilize the new system and maximize its benefits.</li>
+                    </ul> 
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- Work #6 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                    
+                      <strong
+                      >Warehouse Associate - MidWest Co-Packing</strong
+                    >
+                    <br/>
+                    <small>June 2022 – August 2022</small>
+                    
+                    <br />
+                    <ul>
+                      <li>Played a major role in starting a new production line capable of filling larger bottles, observed and refined bottle necks and inconsitencies in the process to increase efficiency.</li>
+                      <li> Led and operated production line to meet a 300 pallet per week quota; maintained and repaired industrial equipment 
+                        and processes to enhance an efficient production system.</li>
+                    
+                    </ul> 
+                    </p>
+                  </div>
+                </div>
+                <div class="media-right">
+                  <figure class="image is-64x64">
+                    <img
+                    class="is-rounded"
+                    src="midwestCopacking.png"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+              </article>
+            </div>
+            <hr class="bg-blue my-6">
+            <!-- Extra Curricular -->
+            <div class="subtitle is-3 mt-4" style="font-family: 'Optima'">
+              Extra Curricular
+            </div>
+            <!-- Extra Curricular #1 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-left">
+                  <figure class="image is-64x64">
+                    <img
+                    src="recWell.png"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong
+                        >Board Member - Sport Club Executive Board </strong
+                      >
+                      <br/>
+                    <small>September 2023 – December 2023</small>
+                    <br />
+                    <ul>
+                      <li>  Assisted in the sport club program wide initiative to obtain better practice times by gathering data and testimonies 
+                        from stakeholders and created a data driven pitch to professional staff for changing scheduling policies.</li>
+                      <li>Served on a subcommittee that organized and executed a dodgeball tournament for 200 sport club members, 
+                        significantly enhancing community spirit and camaraderie.</li>
+                        <li> Reviewed Rec Well policies with the goal of increasing sport club participation numbers.</li>
+                    </ul> 
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- Extra Curricular #2 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      
+                      <strong
+                        >President - Fishing Team</strong
+                      >
+                      <br/>
+                    <small>April 2021 – April 2023</small>
+                    
+                    <br />
+                    <ul>
+                      <li>  Organized and executed meetings, fundraising events, and coordinated tournament schedule for 130 active members</li>
+                      <li> Managed and delegated administrative responsibilities and oversaw the budget, bank accounts, and finances.</li>
+                      <li> Led efforts to purchase a team boat including coordinating various fundraising activities and preparing necessary 
+                        documentation and guidelines to ensure proper use and safety</li>
+                    </ul> 
+                    </p>
+                  </div>
+                </div>
+                <div class="media-right">
+                  <figure class="image is-64x64">
+                    <img
+                      src="fishingLogo.png"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+              </article>
+            </div>
+            <!-- Extra Curricular #3 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-left">
+                  <figure class="image is-64x64">
+                    <img
+                      src="fishingLogo.png"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong
+                        >Apparel Manager - Fishing Team </strong
+                      >
+                      <br/>
+                    <small>April 2020 – April 2021</small>
+                    <br />
+                    <ul>
+                      <li> Coordinated annual online marketplace and ensured orders were filled and shipped on time.
+                      </li>
+                      <li>Designed, promoted, and distributed team jerseys that comply with UW-Madison standards for club sports.</li>
+                      <li>Managed team online store and packaged & shipped any incoming orders while regularly maintaining and updating inventory.</li>
+                    </ul> 
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <!-- Extra Curricular #4 -->
+            <div class="box">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                    
+                        <strong
+                          >Software Development Club </strong
+                        >
+                        <br/>
+                      <small>September 2019 – September 2021</small>
+                  
+                    <br />
+                    <ul>
+                      <li> Engaged in weekly meetings to learn practices in technology related career paths and how to succeed in the field.
+                      </li>
+                      <li>Developed technology application skills, including app building and personal website development for networking.</li>
+                    </ul> 
+                  </div>
+                </div>
+                <div class="media-right">
+                  <figure class="image is-64x64">
+                    <img
+                    class="is-rounded"
+
+                      src="sdc.jpeg"
+                      alt="Image"
+                    />
+                  </figure>
+                </div>
+              </article>
+            </div>
+          <!-- Extra Curricular #5 -->
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img
+                  class="is-rounded"
+
+                    src="sbc.png"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong
+                      >Sports Business Club</strong
+                    >
+                    <br/>
+                  <small>September 2019 – September 2021</small>
+                  <br />
+                  <ul>
+                    <li> Participated in meetings to enhance professional competence such as interview skills and business communication.
+                    </li>
+                    <li>Networked with 320 active members to foster relationships throughout the business community.</li>                </ul> 
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Scroll Hint -->
+          <!-- <div class="scroll-hint">
+            <span>⇩ Scroll for more ⇩</span>
+          </div> -->
+        </div>
+
+       <!-- Contact Container -->
+       <div class="container p-6 is-hidden" id="contactContainer">
+          <!-- Title and Logo -->
+          <div class="columns is-multiline is-vcentered mb-4">
+            <div class="column is-full-mobile is-6-tablet is-6-desktop">
+              <h1 class="title is-2 is-uppercase">Contact.</h1>
+            </div>
+            <div class="column is-full-mobile is-6-tablet is-6-desktop has-text-centered">
+              <figure class="image is-inline-block" style="width: 150px;">
+                <img src="personalLogo.png" alt="Logo" class="is-rounded" style="width: 100%;" />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="columns is-multiline is-vcentered has-text-centered-mobile">
+            <div class="column is-12-mobile is-1-tablet is-1-desktop has-text-centered">
+              <a href="tel:+12629555447" target="_blank">
+                <i class="fa-solid fa-phone fa-2x font-blue is-clickable"></i>
+              </a>
+            </div>
+            <div class="column is-12-mobile is-11-tablet is-11-desktop has-text-left">
+              <p class="subtitle is-4" style="font-family: 'Geneva'">
+                Phone – (262) 955-5447
+              </p>
+            </div>
+
+            <div class="column is-12-mobile is-1-tablet is-1-desktop has-text-centered">
+              <a href="mailto:c.kolb13@outlook.com" target="_blank">
+                <i class="fa-solid fa-envelope fa-2x font-blue is-clickable"></i>
+              </a>
+            </div>
+            <div class="column is-12-mobile is-11-tablet is-11-desktop has-text-left">
+              <p class="subtitle is-4" style="font-family: 'Geneva'">
+                Email – c.kolb13@outlook.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Resume Section -->
+          <div class="section has-text-centered">
+            <h2 class="title is-4" style="font-family: 'Geneva'">
+              Sneak Peek into My Resume
+            </h2>
+            <p class="subtitle is-5 mb-4" style="font-family: 'Geneva'">
+              Discover my journey through education and professional experiences.
+            </p>
+
+            <!-- PDF Preview -->
+            <div class="pdf-preview mb-4">
+              <iframe src="ConnorKolbResume.pdf" width="100%" height="400" style="border: none;"></iframe>
+            </div>
+
+            <!-- Download Button -->
+            <a href="/ConnorKolbResume.pdf" download="Connor Kolb Resume" class="button yellow-cta">
+              <span>Download My Resume</span>
+              <span class="icon is-half">
+                <i class="fa-solid fa-download"></i>
+              </span>
+            </a>
+          </div>
+       </div>
+       <!-- End Contact -->
+
+
+        <!-- Admin Container -->
+        <div class="container p-6 is-hidden" id="adminContainer">
+          <div class="title is-2 is-uppercase">Admin.</div>
+          <!-- Word Cloud -->
+          <section class="section">
+            <h1 class="subtitle is-3">Skills Word Cloud</h1>
+            <form id="wordInputForm" class="field has-addons">
+              <div class="control is-expanded">
+                <input
+                  class="input"
+                  type="text"
+                  id="wordInput"
+                  name="word"
+                  placeholder="Enter a word"
+                />
+              </div>
+              <div class="control">
+                <button type="submit" class="button is-primary">Submit</button>
+              </div>
+            </form>
+            <button class="button is-danger" id="deleteSkillBtn">
+              Delete Skills
+            </button>
+            <div class="box is-hidden mt-2" id="skillSet">
+              <div id="skillsList">
+                <!-- Dynamically populated skills will go here -->
+              </div>
+
+              <button class="button is-primary" id="saveDeleteSkills">
+                Save Changes
+              </button>
+            </div>
+          </section>
+          <!-- File Upload -->
+          <h1 class="subtitle is-3">File Upload</h1>
+          <form id="fileUploadForm">
+            <div class="field">
+              <label class="label">Document Name</label>
+              <div class="control">
+                <input class="input" type="text" id="documentName" placeholder="Enter document name">
+              </div>
+            </div>
+          
+            <div class="file has-name">
+              <label class="file-label">
+                <input class="file-input" type="file" id="fileInput">
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Choose a file…
+                  </span>
+                </span>
+                <span class="file-name" id="fileName">
+                  No file chosen
+                </span>
+              </label>
+            </div>
+          
+            <div class="control">
+              <button type="submit" class="button is-link mt-2">Submit</button>
+            </div>
+          </form>
+          
+        </div>
+        <!-- End Admin -->
+      </div>
+    </div>
+
+    <footer class="footer bg-blue">
+      <div class="columns is-desktop-only">
+        <div class="column is-one-third"></div>
+        <div class="column is-one-third has-text-centered">
+          <a
+            href="https://www.instagram.com/connorkolb13?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              class="font-gold fa-3x mx-2 is-clickable fa-brands fa-instagram"
+            ></i>
+          </a>
+          <a
+            href="https://www.facebook.com/connor.kolb.7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              class="font-gold fa-3x mx-2 is-clickable fa-brands fa-facebook"
+            ></i>
+          </a>
+          <a
+            href="https://github.com/connor-kolb-13"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="font-gold fa-3x mx-2 is-clickable fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/connor-kolb-16b581155"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              class="font-gold fa-3x mx-2 is-clickable fa-brands fa-linkedin"
+            ></i
+          ></a>
+          <a
+            href="mailto:c.kolb13@outlook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              class="font-gold fa-3x mx-2 is-clickable fa-solid fa-envelope"
+            ></i>
+          </a>
+        </div>
+        <div class="column is-one-third"></div>
+      </div>
+      <div class="content has-text-centered font-eggshell">
+        <p id="adminBtn">Created by Connor Kolb</p>
+        <br />
+        <button class="button is-danger is-hidden" id="signOutBtn">
+          Sign Out
+        </button>
+      </div>
+    </footer>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <!-- Word Cloud -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.1.0/wordcloud2.min.js"></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCGq1ljfkisk3VMgRcPNt-E3TS-uieVdkM",
+        authDomain: "connor-kolb-portfolio.firebaseapp.com",
+        projectId: "connor-kolb-portfolio",
+        storageBucket: "connor-kolb-portfolio.appspot.com",
+        messagingSenderId: "773915909335",
+        appId: "1:773915909335:web:e12f9f72fd16a9a6412492",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // define authentication variable
+      let auth = firebase.auth();
+      let db = firebase.firestore();
+      let analytics = getAnalytics(app);
+
+      // define a storage reference
+      let ref = firebase.storage().ref();
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
