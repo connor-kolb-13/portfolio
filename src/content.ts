@@ -27,7 +27,7 @@ export const profile = {
   short: 'CK',
   role: 'Data and AI engineer',
   location: 'West Palm Beach, FL',
-  email: 'c.kolb13@outlook.com',
+  email: 'connor@phasezerolabsllc.com',
   linkedin: '',
   github: 'https://github.com/connor-kolb-13',
   studio: { name: 'Phase Zero Labs', url: 'https://phasezerolabsllc.com' },
