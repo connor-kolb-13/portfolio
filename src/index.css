@@ -136,31 +136,31 @@ body {
   --display-family: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
   --body-family: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
   --display-weight: 600;
-  --display-tracking: -0.04em;
+  --display-tracking: -0.03em;
 }
 :root[data-font="manrope"] {
   --display-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --body-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --display-weight: 650;
-  --display-tracking: -0.038em;
+  --display-tracking: -0.026em;
 }
 :root[data-font="jakarta"] {
   --display-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --body-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --display-weight: 650;
-  --display-tracking: -0.036em;
+  --display-tracking: -0.026em;
 }
 :root[data-font="sora"] {
   --display-family: "Sora", ui-sans-serif, system-ui, sans-serif;
   --body-family: "Sora", ui-sans-serif, system-ui, sans-serif;
   --display-weight: 500;
-  --display-tracking: -0.045em;
+  --display-tracking: -0.04em;
 }
 :root[data-font="hanken"] {
   --display-family: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
   --body-family: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
   --display-weight: 600;
-  --display-tracking: -0.038em;
+  --display-tracking: -0.03em;
 }
 
 /* Styles: density (spacing scale), rounding, width and atmosphere. */

@@ -35,7 +35,7 @@ export const profile = {
 
 export const hero = {
   kicker: 'Data and AI engineer · Founder, Phase Zero Labs',
-  headline: ['I build practical AI', 'that changes how', 'businesses actually run.'],
+  headline: ['I build practical AI', 'that changes how', 'businesses', 'actually run.'],
   emphasis: 'actually run.',
   lede:
     'By day I engineer data platforms, automation and AI agents for companies at Capital Data. On my own time I run Phase Zero Labs, a small studio that builds software for local operators, and I do pro bono work for the communities I belong to.',

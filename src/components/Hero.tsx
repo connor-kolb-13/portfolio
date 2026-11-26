@@ -31,7 +31,7 @@ export default function Hero() {
 
         <div className="mt-10 grid items-end gap-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-8">
-            <h1 id="hero-title" className="display text-[clamp(2.7rem,7.4vw,6.4rem)] leading-[0.95]">
+            <h1 id="hero-title" className="display text-[clamp(2.6rem,6.6vw,5.5rem)] leading-[0.98]">
               <MaskLines lines={hero.headline} emphasis={hero.emphasis} delay={0.15} />
             </h1>
             <motion.p
