@@ -13,16 +13,16 @@ export default function Hero() {
   return (
     <section ref={ref} className="relative overflow-hidden pt-28 sm:pt-36" aria-labelledby="hero-title">
       <motion.div aria-hidden style={{ y: glowY }} className="aurora pointer-events-none absolute inset-0 -z-10" />
-      <div aria-hidden className="grid-lines pointer-events-none absolute inset-0 -z-10 opacity-60" />
+      <div aria-hidden className="grid-lines pointer-events-none absolute inset-0 -z-10" />
 
-      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
+      <div className="mx-auto max-w-(--container) px-5 sm:px-8">
         <motion.div
           className="flex flex-wrap items-center gap-x-4 gap-y-2"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease }}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/40 px-3 py-1.5 backdrop-blur">
+          <span className="inline-flex items-center gap-2 rounded-pill border border-line bg-surface/40 px-3 py-1.5 backdrop-blur">
             <span className="pulse-dot size-1.5 rounded-full bg-brass" />
             <span className="eyebrow !text-ink-2">{profile.location}</span>
           </span>
@@ -50,7 +50,7 @@ export default function Hero() {
             >
               <SectionLink
                 to="work"
-                className="group inline-flex h-12 items-center gap-3 rounded-full bg-brass px-6 text-[15px] font-medium text-brass-ink transition-transform duration-500 ease-out-expo hover:-translate-y-0.5"
+                className="group inline-flex h-12 items-center gap-3 rounded-pill bg-brass px-6 text-[15px] font-medium text-brass-ink transition-transform duration-500 ease-out-expo hover:-translate-y-0.5"
               >
                 See the work
                 <span className="transition-transform duration-500 ease-out-expo group-hover:translate-y-0.5" aria-hidden>
@@ -59,7 +59,7 @@ export default function Hero() {
               </SectionLink>
               <SectionLink
                 to="contact"
-                className="inline-flex h-12 items-center rounded-full border border-line-strong px-6 text-[15px] text-ink transition-colors duration-300 hover:bg-surface-2/60"
+                className="inline-flex h-12 items-center rounded-pill border border-line-strong px-6 text-[15px] text-ink transition-colors duration-300 hover:bg-surface-2/60"
               >
                 Start a conversation
               </SectionLink>
@@ -73,7 +73,7 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 1.2, ease, delay: 0.3 }}
           >
-            <div className="relative overflow-hidden rounded-[28px] border border-line bg-surface shadow-[var(--shadow)]">
+            <div className="relative overflow-hidden rounded-3xl border border-line bg-surface shadow-[var(--shadow)]">
               <img
                 src={`${import.meta.env.BASE_URL}portrait.jpg`}
                 alt={`Portrait of ${profile.name}`}
@@ -88,14 +88,14 @@ export default function Hero() {
                   <p className="font-display text-xl leading-tight">{profile.name}</p>
                   <p className="mt-1 text-[13px] text-[#b7c2d9]">{profile.role}</p>
                 </div>
-                <span className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] backdrop-blur">
+                <span className="rounded-pill border border-white/15 bg-white/5 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] backdrop-blur">
                   WPB · FL
                 </span>
               </figcaption>
             </div>
             <div
               aria-hidden
-              className="absolute -inset-3 -z-10 rounded-[34px] border border-line"
+              className="absolute -inset-3 -z-10 rounded-[calc(var(--radius-3xl)+0.375rem)] border border-line"
               style={{ maskImage: 'linear-gradient(135deg, #000 30%, transparent 70%)' }}
             />
           </motion.figure>

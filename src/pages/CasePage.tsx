@@ -36,7 +36,7 @@ export default function CasePage() {
       className="relative"
     >
       <div aria-hidden className="aurora pointer-events-none absolute inset-x-0 top-0 -z-10 h-[80vh]" />
-      <article className="mx-auto max-w-[1240px] px-5 pt-28 sm:px-8 sm:pt-36">
+      <article className="mx-auto max-w-(--container) px-5 pt-28 sm:px-8 sm:pt-36">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function CasePage() {
           <span className="text-line-strong">/</span>
           <span className="eyebrow">Case {c.index}</span>
           {c.status && (
-            <span className="rounded-full border border-brass/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.12em] text-brass">
+            <span className="rounded-pill border border-brass/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.12em] text-brass">
               {c.status}
             </span>
           )}
@@ -96,7 +96,7 @@ export default function CasePage() {
               <p className="eyebrow">Stack</p>
               <ul className="mt-4 flex flex-wrap gap-2 lg:flex-col lg:items-start">
                 {c.stack.map((s) => (
-                  <li key={s} className="rounded-full border border-line px-3 py-1.5 text-[13px] text-ink-2">
+                  <li key={s} className="rounded-pill border border-line px-3 py-1.5 text-[13px] text-ink-2">
                     {s}
                   </li>
                 ))}
@@ -150,7 +150,7 @@ export default function CasePage() {
         to={`/work/${next.slug}`}
         className="group mt-32 block border-t border-line transition-colors duration-500 hover:bg-surface/40"
       >
-        <div className="mx-auto flex max-w-[1240px] items-end justify-between gap-8 px-5 py-16 sm:px-8 sm:py-24">
+        <div className="mx-auto flex max-w-(--container) items-end justify-between gap-8 px-5 py-16 sm:px-8 sm:py-24">
           <div>
             <p className="eyebrow">Next case · {next.index}</p>
             <p className="display mt-4 text-[clamp(2rem,5vw,4rem)] leading-[1] transition-transform duration-700 ease-out-expo group-hover:translate-x-2">
@@ -159,7 +159,7 @@ export default function CasePage() {
           </div>
           <span
             aria-hidden
-            className="grid size-14 shrink-0 place-items-center rounded-full border border-line-strong text-xl transition-all duration-500 ease-out-expo group-hover:border-brass group-hover:bg-brass group-hover:text-brass-ink"
+            className="grid size-14 shrink-0 place-items-center rounded-pill border border-line-strong text-xl transition-all duration-500 ease-out-expo group-hover:border-brass group-hover:bg-brass group-hover:text-brass-ink"
           >
             →
           </span>

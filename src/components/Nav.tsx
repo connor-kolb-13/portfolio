@@ -20,7 +20,7 @@ function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="group relative grid size-10 place-items-center rounded-full border border-line text-ink-2 transition-colors duration-300 hover:border-line-strong hover:text-ink"
+      className="group relative grid size-10 place-items-center rounded-pill border border-line text-ink-2 transition-colors duration-300 hover:border-line-strong hover:text-ink"
     >
       <svg viewBox="0 0 24 24" className="size-[18px]" fill="none" stroke="currentColor" strokeWidth="1.6">
         <motion.circle
@@ -86,9 +86,9 @@ export default function Nav() {
             : 'border-b border-transparent'
         }`}
       >
-        <div className="mx-auto flex h-16 max-w-[1240px] items-center justify-between gap-6 px-5 sm:h-[72px] sm:px-8">
+        <div className="mx-auto flex h-16 max-w-(--container) items-center justify-between gap-6 px-5 sm:h-[72px] sm:px-8">
           <Link to="/" className="group flex items-center gap-3" aria-label={`${profile.name}, home`}>
-            <span className="grid size-9 place-items-center rounded-full bg-navy font-display text-[15px] font-semibold tracking-tight text-[#f3e6c4] ring-1 ring-white/10 transition-transform duration-500 ease-out-expo group-hover:-rotate-12">
+            <span className="grid size-9 place-items-center rounded-pill bg-navy font-display text-[15px] font-semibold tracking-tight text-[#f3e6c4] ring-1 ring-white/10 transition-transform duration-500 ease-out-expo group-hover:-rotate-12">
               ck
             </span>
             <span className="hidden font-display text-[17px] tracking-tight text-ink sm:block">{profile.name}</span>
@@ -99,7 +99,7 @@ export default function Nav() {
               <SectionLink
                 key={l.id}
                 to={l.id}
-                className="rounded-full px-3.5 py-2 text-[14px] text-ink-2 transition-colors duration-300 hover:bg-surface-2/60 hover:text-ink"
+                className="rounded-pill px-3.5 py-2 text-[14px] text-ink-2 transition-colors duration-300 hover:bg-surface-2/60 hover:text-ink"
               >
                 {l.label}
               </SectionLink>
@@ -110,14 +110,14 @@ export default function Nav() {
             <ThemeToggle />
             <SectionLink
               to="contact"
-              className="hidden h-10 items-center gap-2 rounded-full bg-ink px-4 text-[14px] font-medium text-bg transition-transform duration-300 ease-out-expo hover:-translate-y-0.5 sm:inline-flex"
+              className="hidden h-10 items-center gap-2 rounded-pill bg-ink px-4 text-[14px] font-medium text-bg transition-transform duration-300 ease-out-expo hover:-translate-y-0.5 sm:inline-flex"
             >
               Get in touch
               <span aria-hidden>→</span>
             </SectionLink>
             <button
               type="button"
-              className="grid size-10 place-items-center rounded-full border border-line md:hidden"
+              className="grid size-10 place-items-center rounded-pill border border-line md:hidden"
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
               aria-controls="mobile-menu"

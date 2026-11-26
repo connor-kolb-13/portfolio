@@ -24,8 +24,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative scroll-mt-24 overflow-hidden py-28 sm:py-40" aria-labelledby="contact-title">
-      <div aria-hidden className="aurora pointer-events-none absolute inset-0 -z-10 opacity-90" />
-      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
+      <div aria-hidden className="aurora pointer-events-none absolute inset-0 -z-10" />
+      <div className="mx-auto max-w-(--container) px-5 sm:px-8">
         <Reveal className="flex items-center gap-3">
           <span className="eyebrow text-brass">05</span>
           <span className="eyebrow">Contact</span>
@@ -41,7 +41,7 @@ export default function Contact() {
         <Reveal delay={0.2} className="mt-12 flex flex-wrap items-center gap-3">
           <a
             href={`mailto:${profile.email}`}
-            className="group inline-flex h-14 items-center gap-3 rounded-full bg-brass px-7 text-[16px] font-medium text-brass-ink transition-transform duration-500 ease-out-expo hover:-translate-y-0.5"
+            className="group inline-flex h-14 items-center gap-3 rounded-pill bg-brass px-7 text-[16px] font-medium text-brass-ink transition-transform duration-500 ease-out-expo hover:-translate-y-0.5"
           >
             {profile.email}
             <span className="transition-transform duration-500 ease-out-expo group-hover:translate-x-1" aria-hidden>
@@ -51,7 +51,7 @@ export default function Contact() {
           <button
             type="button"
             onClick={copy}
-            className="relative inline-flex h-14 min-w-[9.5rem] items-center justify-center overflow-hidden rounded-full border border-line-strong px-6 text-[15px] text-ink transition-colors duration-300 hover:bg-surface-2/60"
+            className="relative inline-flex h-14 min-w-[9.5rem] items-center justify-center overflow-hidden rounded-pill border border-line-strong px-6 text-[15px] text-ink transition-colors duration-300 hover:bg-surface-2/60"
           >
             <AnimatePresence mode="wait" initial={false}>
               <motion.span

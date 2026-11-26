@@ -4,7 +4,7 @@ import { Reveal, SectionHead } from './motion'
 export default function Experience() {
   return (
     <section id="experience" className="scroll-mt-24 py-28 sm:py-36" aria-labelledby="experience-title">
-      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
+      <div className="mx-auto max-w-(--container) px-5 sm:px-8">
         <SectionHead
           index="03"
           label="Experience"

@@ -4,7 +4,7 @@ import { Reveal, SectionHead } from './motion'
 export default function Community() {
   return (
     <section id="community" className="scroll-mt-24 bg-bg-2 py-28 sm:py-36" aria-labelledby="community-title">
-      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
+      <div className="mx-auto max-w-(--container) px-5 sm:px-8">
         <SectionHead
           index="04"
           label="Community"

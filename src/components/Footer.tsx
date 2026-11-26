@@ -3,7 +3,7 @@ import { profile } from '../content'
 export default function Footer() {
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto flex max-w-[1240px] flex-col gap-4 px-5 py-10 text-[13px] text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
+      <div className="mx-auto flex max-w-(--container) flex-col gap-4 px-5 py-10 text-[13px] text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <p>
           © {new Date().getFullYear()} {profile.name} · {profile.location}
         </p>

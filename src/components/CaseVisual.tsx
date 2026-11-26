@@ -11,7 +11,7 @@ function Frame({ children, label }: { children: React.ReactNode; label: string }
       aria-label={label}
       className="relative isolate aspect-[4/3] w-full overflow-hidden rounded-2xl border border-line bg-bg-2"
     >
-      <div aria-hidden className="aurora absolute inset-0 -z-10 opacity-80" />
+      <div aria-hidden className="aurora absolute inset-0 -z-10" />
       <div
         aria-hidden
         className="absolute inset-0 -z-10 opacity-50"
@@ -149,7 +149,7 @@ function Studio() {
           </motion.div>
         ))}
       </div>
-      <motion.div {...pop(5)} className="absolute bottom-[7%] right-[7%] rounded-full border border-brass/50 bg-bg/80 px-3 py-1 font-mono text-[9.5px] text-brass backdrop-blur">
+      <motion.div {...pop(5)} className="absolute bottom-[7%] right-[7%] rounded-pill border border-brass/50 bg-bg/80 px-3 py-1 font-mono text-[9.5px] text-brass backdrop-blur">
         ● human gate before deploy
       </motion.div>
     </Frame>
@@ -236,7 +236,7 @@ function Club() {
           <motion.div {...pop(3)} className={`${card} p-2.5`}>
             <p className="font-mono text-[9px] uppercase tracking-widest text-muted">Shop</p>
             <p className="mt-1 text-[11px] text-ink">Team jersey</p>
-            <span className="mt-1 inline-block rounded-full bg-brass px-2 py-0.5 text-[9px] text-brass-ink">Add to cart</span>
+            <span className="mt-1 inline-block rounded-pill bg-brass px-2 py-0.5 text-[9px] text-brass-ink">Add to cart</span>
           </motion.div>
           <motion.div {...pop(4)} className="rounded-xl border border-dashed border-brass/60 p-2 text-center font-mono text-[9px] text-brass">
             pro bono

@@ -11,7 +11,7 @@ export default function Work() {
 
   return (
     <section id="work" className="scroll-mt-24 py-28 sm:py-36" aria-labelledby="work-title">
-      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
+      <div className="mx-auto max-w-(--container) px-5 sm:px-8">
         <SectionHead
           index="01"
           label="Selected work"
@@ -45,7 +45,7 @@ export default function Work() {
                     <span className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
                       <span className="eyebrow">{c.sector}</span>
                       {c.status && (
-                        <span className="rounded-full border border-brass/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.12em] text-brass">
+                        <span className="rounded-pill border border-brass/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.12em] text-brass">
                           {c.status}
                         </span>
                       )}
@@ -62,7 +62,7 @@ export default function Work() {
                   </span>
                   <span
                     aria-hidden
-                    className="mt-1 grid size-10 place-items-center rounded-full border border-line text-ink-2 transition-all duration-500 ease-out-expo group-hover:border-brass group-hover:bg-brass group-hover:text-brass-ink"
+                    className="mt-1 grid size-10 place-items-center rounded-pill border border-line text-ink-2 transition-all duration-500 ease-out-expo group-hover:border-brass group-hover:bg-brass group-hover:text-brass-ink"
                   >
                     <span className="transition-transform duration-500 ease-out-expo group-hover:-rotate-45">→</span>
                   </span>
@@ -89,7 +89,7 @@ export default function Work() {
                     </div>
                     <ul className="flex flex-wrap justify-end gap-1.5">
                       {current.stack.slice(0, 3).map((s) => (
-                        <li key={s} className="rounded-full border border-line px-2.5 py-1 text-[12px] text-muted">
+                        <li key={s} className="rounded-pill border border-line px-2.5 py-1 text-[12px] text-muted">
                           {s}
                         </li>
                       ))}
