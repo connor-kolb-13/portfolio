@@ -1,11 +1,20 @@
 import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import CaseVisual from '../components/CaseVisual'
+import Diagram from '../components/Diagram'
 import { MaskLines, Reveal, ease } from '../components/motion'
+import SectionLink from '../components/SectionLink'
 import { cases, profile } from '../content'
 import NotFound from './NotFound'
-import SectionLink from '../components/SectionLink'
+
+function Label({ n, children }: { n: string; children: React.ReactNode }) {
+  return (
+    <h2 className="flex items-center gap-3">
+      <span className="font-mono text-[11px] text-brass">{n}</span>
+      <span className="eyebrow">{children}</span>
+    </h2>
+  )
+}
 
 export default function CasePage() {
   const { slug } = useParams()
@@ -21,10 +30,13 @@ export default function CasePage() {
 
   const meta = [
     { k: 'Sector', v: c.sector },
-    { k: 'Context', v: c.context },
-    { k: 'Role', v: c.role },
+    { k: 'For', v: c.context },
+    { k: 'My role', v: c.role },
     { k: 'Timeline', v: c.timeline },
   ]
+
+  let section = 0
+  const num = () => String(++section).padStart(2, '0')
 
   return (
     <motion.main
@@ -55,16 +67,16 @@ export default function CasePage() {
           )}
         </motion.div>
 
-        <h1 className="display mt-8 max-w-[16ch] text-[clamp(2.5rem,6.4vw,5.6rem)] leading-[0.98]">
+        <h1 className="display mt-8 max-w-[18ch] text-[clamp(2.4rem,5.8vw,5rem)] leading-[1]">
           <MaskLines lines={[c.title]} delay={0.1} />
         </h1>
         <motion.p
-          className="mt-8 max-w-[40rem] text-[18px] leading-relaxed text-ink-2 sm:text-xl"
+          className="mt-8 max-w-[46rem] text-[18px] leading-relaxed text-ink-2 sm:text-[20px]"
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease, delay: 0.35 }}
         >
-          {c.outcome}
+          {c.summary}
         </motion.p>
 
         <motion.dl
@@ -76,63 +88,130 @@ export default function CasePage() {
           {meta.map((m) => (
             <div key={m.k} className="bg-bg p-5">
               <dt className="eyebrow">{m.k}</dt>
-              <dd className="mt-2 text-[15px] text-ink">{m.v}</dd>
+              <dd className="mt-2 text-[15px] leading-snug text-ink">{m.v}</dd>
             </div>
           ))}
         </motion.dl>
 
-        <motion.div
-          className="mt-10"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease, delay: 0.55 }}
-        >
-          <CaseVisual kind={c.visual} />
-        </motion.div>
+        {c.results.length > 0 && (
+          <motion.dl
+            className={`mt-4 grid gap-px overflow-hidden rounded-2xl border border-line bg-line ${
+              c.results.length === 2 ? 'sm:grid-cols-2' : 'sm:grid-cols-3'
+            }`}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease, delay: 0.55 }}
+          >
+            {c.results.map((r) => (
+              <div key={r.label} className="bg-surface/50 p-6 sm:p-7">
+                <dt className="sr-only">{r.label}</dt>
+                <dd>
+                  <span className="display block text-[clamp(2.2rem,4vw,3.25rem)] leading-none text-ink">{r.value}</span>
+                  <span className="mt-3 block max-w-[22rem] text-[14px] leading-snug text-ink-2">{r.label}</span>
+                </dd>
+              </div>
+            ))}
+          </motion.dl>
+        )}
 
-        <div className="mt-24 grid gap-16 lg:grid-cols-12">
+        <div className="mt-28 grid gap-16 lg:grid-cols-12">
           <aside className="lg:col-span-3">
-            <div className="lg:sticky lg:top-28">
-              <p className="eyebrow">Stack</p>
-              <ul className="mt-4 flex flex-wrap gap-2 lg:flex-col lg:items-start">
-                {c.stack.map((s) => (
-                  <li key={s} className="rounded-pill border border-line px-3 py-1.5 text-[13px] text-ink-2">
-                    {s}
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-10 lg:sticky lg:top-28">
+              <div>
+                <p className="eyebrow">Stack</p>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {c.stack.map((s) => (
+                    <li key={s} className="rounded-pill border border-line px-3 py-1.5 text-[13px] text-ink-2">
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {c.myPart && (
+                <div>
+                  <p className="eyebrow">What I owned</p>
+                  <ul className="mt-4 space-y-2.5">
+                    {c.myPart.map((p) => (
+                      <li key={p} className="flex gap-3 text-[14px] leading-snug text-ink-2">
+                        <span aria-hidden className="mt-[7px] h-px w-3 shrink-0 bg-brass" />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </aside>
 
-          <div className="space-y-20 lg:col-span-8 lg:col-start-5">
+          <div className="space-y-24 lg:col-span-8 lg:col-start-5">
             <Reveal as="section">
-              <h2 className="eyebrow text-brass">The problem</h2>
-              {c.problem.map((p) => (
-                <p key={p} className="display mt-5 text-[clamp(1.35rem,2.2vw,1.85rem)] leading-[1.3] text-ink">
+              <Label n={num()}>The problem</Label>
+              {c.problem.map((p, k) => (
+                <p
+                  key={p}
+                  className={
+                    k === 0
+                      ? 'display mt-6 text-[clamp(1.4rem,2.3vw,1.95rem)] leading-[1.3] text-ink'
+                      : 'mt-5 text-[17px] leading-relaxed text-ink-2'
+                  }
+                >
                   {p}
                 </p>
               ))}
             </Reveal>
 
+            {c.constraints.length > 0 && (
+              <Reveal as="section">
+                <Label n={num()}>What made it hard</Label>
+                <ul className="mt-6 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
+                  {c.constraints.map((x) => (
+                    <li key={x.title} className="bg-bg p-6">
+                      <p className="text-[16px] font-medium text-ink">{x.title}</p>
+                      <p className="mt-2 text-[15px] leading-relaxed text-ink-2">{x.body}</p>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            )}
+
             <section>
               <Reveal>
-                <h2 className="eyebrow text-brass">What I built</h2>
+                <Label n={num()}>{c.builtLabel ?? 'What I built'}</Label>
               </Reveal>
               <ol className="mt-6">
                 {c.built.map((b, n) => (
-                  <Reveal as="li" key={b.title} delay={n * 0.06} className="grid grid-cols-[2.5rem_1fr] gap-4 border-t border-line py-7">
+                  <Reveal as="li" key={b.title} delay={n * 0.05} className="grid grid-cols-[2.5rem_1fr] gap-4 border-t border-line py-8">
                     <span className="font-mono text-[12px] text-muted">0{n + 1}</span>
                     <div>
                       <h3 className="text-[19px] font-medium text-ink">{b.title}</h3>
                       <p className="mt-2 text-[16px] leading-relaxed text-ink-2">{b.body}</p>
+                      {b.decision && (
+                        <p className="mt-4 rounded-xl border-l-2 border-brass bg-surface/50 py-3 pl-4 pr-4 text-[14.5px] leading-relaxed text-ink-2">
+                          <span className="font-medium text-ink">Why: </span>
+                          {b.decision}
+                        </p>
+                      )}
                     </div>
                   </Reveal>
                 ))}
               </ol>
             </section>
+          </div>
+        </div>
 
+        {c.diagram && (
+          <Reveal as="section" className="mt-24">
+            <div className="mb-6 lg:ml-[calc((100%+2.5rem)/12*4)]">
+              <Label n={num()}>How it works</Label>
+            </div>
+            <Diagram spec={c.diagram} index={c.index} />
+          </Reveal>
+        )}
+
+        <div className="mt-24 grid gap-16 lg:grid-cols-12">
+          <div className="space-y-24 lg:col-span-8 lg:col-start-5">
             <Reveal as="section" className="rounded-3xl border border-line bg-surface/60 p-8 sm:p-10">
-              <h2 className="eyebrow text-brass">What changed</h2>
+              <Label n={num()}>{c.changedLabel ?? 'What changed'}</Label>
               <ul className="mt-6 space-y-5">
                 {c.changed.map((x) => (
                   <li key={x} className="flex gap-4 text-[17px] leading-relaxed text-ink">
@@ -142,6 +221,13 @@ export default function CasePage() {
                 ))}
               </ul>
             </Reveal>
+
+            {c.lesson && (
+              <Reveal as="section">
+                <Label n={num()}>{c.status ? 'What comes next' : 'What I took from it'}</Label>
+                <p className="mt-6 text-[17px] leading-relaxed text-ink-2">{c.lesson}</p>
+              </Reveal>
+            )}
           </div>
         </div>
       </article>
@@ -153,7 +239,7 @@ export default function CasePage() {
         <div className="mx-auto flex max-w-(--container) items-end justify-between gap-8 px-5 py-16 sm:px-8 sm:py-24">
           <div>
             <p className="eyebrow">Next case · {next.index}</p>
-            <p className="display mt-4 text-[clamp(2rem,5vw,4rem)] leading-[1] transition-transform duration-700 ease-out-expo group-hover:translate-x-2">
+            <p className="display mt-4 max-w-[20ch] text-[clamp(2rem,4.6vw,3.6rem)] leading-[1.02] transition-transform duration-700 ease-out-expo group-hover:translate-x-2">
               {next.title}
             </p>
           </div>

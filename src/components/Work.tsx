@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { cases, moreBuilds } from '../content'
-import CaseVisual from './CaseVisual'
 import { Reveal, SectionHead, ease } from './motion'
 
 export default function Work() {
@@ -56,9 +55,6 @@ export default function Work() {
                     <span id={`case-${c.slug}-outcome`} className="mt-2 block max-w-[34rem] text-[15px] leading-relaxed text-ink-2">
                       {c.outcome}
                     </span>
-                    <span className="mt-5 block lg:hidden">
-                      <CaseVisual kind={c.visual} />
-                    </span>
                   </span>
                   <span
                     aria-hidden
@@ -81,19 +77,43 @@ export default function Work() {
                   exit={{ opacity: 0, y: -10, filter: 'blur(6px)' }}
                   transition={{ duration: 0.5, ease }}
                 >
-                  <CaseVisual kind={current.visual} />
-                  <div className="mt-5 flex items-start justify-between gap-6">
-                    <div>
-                      <p className="eyebrow">{current.context}</p>
-                      <p className="mt-2 text-[14px] text-ink-2">{current.role}</p>
+                  <div className="overflow-hidden rounded-2xl border border-line bg-bg-2">
+                    <div className="flex items-start justify-between gap-6 border-b border-line p-7">
+                      <div>
+                        <p className="eyebrow">{current.sector}</p>
+                        <p className="mt-3 text-[15px] leading-snug text-ink-2">{current.context}</p>
+                      </div>
+                      <span className="display text-[4.5rem] leading-[0.8] text-line-strong">{current.index}</span>
                     </div>
-                    <ul className="flex flex-wrap justify-end gap-1.5">
-                      {current.stack.slice(0, 3).map((s) => (
-                        <li key={s} className="rounded-pill border border-line px-2.5 py-1 text-[12px] text-muted">
-                          {s}
-                        </li>
-                      ))}
-                    </ul>
+                    {current.results.length > 0 ? (
+                      <dl className="divide-y divide-line">
+                        {current.results.map((r) => (
+                          <div key={r.label} className="grid grid-cols-[minmax(7.5rem,auto)_1fr] items-baseline gap-5 px-7 py-5">
+                            <dt className="display whitespace-nowrap text-[1.9rem] leading-none text-ink">{r.value}</dt>
+                            <dd className="text-[14px] leading-snug text-ink-2">{r.label}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    ) : (
+                      <ul className="space-y-3 px-7 py-6">
+                        {current.changed.slice(0, 2).map((x) => (
+                          <li key={x} className="flex gap-3 text-[14.5px] leading-relaxed text-ink-2">
+                            <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-brass" />
+                            {x}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <div className="flex items-center justify-between gap-6 border-t border-line px-7 py-5">
+                      <ul className="flex flex-wrap gap-1.5">
+                        {current.stack.slice(0, 3).map((s) => (
+                          <li key={s} className="rounded-pill border border-line px-2.5 py-1 text-[12px] text-muted">
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
+                      <span className="shrink-0 font-mono text-[11px] uppercase tracking-[0.12em] text-brass">{current.role}</span>
+                    </div>
                   </div>
                 </motion.div>
               </AnimatePresence>
