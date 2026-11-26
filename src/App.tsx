@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import FontSwitcher from './components/FontSwitcher'
 import Home from './pages/Home'
 import CasePage from './pages/CasePage'
 import NotFound from './pages/NotFound'
@@ -44,6 +45,7 @@ export default function App() {
           </Routes>
         </AnimatePresence>
         <Footer />
+        {import.meta.env.VITE_HASH_ROUTER === '1' && <FontSwitcher />}
       </div>
     </MotionConfig>
   )

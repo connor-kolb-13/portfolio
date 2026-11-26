@@ -17,7 +17,7 @@ export default function Work() {
           label="Selected work"
           title={
             <span id="work-title">
-              Real problems, <em className="italic text-brass">real</em> changes.
+              Real problems, <em className="text-brass">real</em> changes.
             </span>
           }
           aside="Each project starts with how people actually worked and ends with what is different now. Client names stay private; the outcomes don’t."

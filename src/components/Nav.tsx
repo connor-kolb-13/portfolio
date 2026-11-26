@@ -88,7 +88,7 @@ export default function Nav() {
       >
         <div className="mx-auto flex h-16 max-w-[1240px] items-center justify-between gap-6 px-5 sm:h-[72px] sm:px-8">
           <Link to="/" className="group flex items-center gap-3" aria-label={`${profile.name}, home`}>
-            <span className="grid size-9 place-items-center rounded-full bg-navy font-display text-[15px] italic text-[#f3e6c4] ring-1 ring-white/10 transition-transform duration-500 ease-out-expo group-hover:-rotate-12">
+            <span className="grid size-9 place-items-center rounded-full bg-navy font-display text-[15px] font-semibold tracking-tight text-[#f3e6c4] ring-1 ring-white/10 transition-transform duration-500 ease-out-expo group-hover:-rotate-12">
               ck
             </span>
             <span className="hidden font-display text-[17px] tracking-tight text-ink sm:block">{profile.name}</span>

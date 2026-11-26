@@ -10,7 +10,7 @@ export default function Approach() {
           label="Approach"
           title={
             <span id="approach-title">
-              Useful beats <em className="italic text-brass">impressive.</em>
+              Useful beats <em className="text-brass">impressive.</em>
             </span>
           }
           aside="Most businesses don’t need an AI strategy. They need one hour a day back, and someone who will sit beside them until it sticks."

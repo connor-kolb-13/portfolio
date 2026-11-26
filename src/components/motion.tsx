@@ -57,7 +57,7 @@ export function MaskLines({
               {emIndex >= 0 ? (
                 <>
                   {line.slice(0, emIndex)}
-                  <em className="italic text-brass" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 100' }}>
+                  <em className="text-brass">
                     {emphasis}
                   </em>
                   {line.slice(emIndex + (emphasis?.length ?? 0))}

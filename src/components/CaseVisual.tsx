@@ -53,7 +53,7 @@ function Agents() {
         ))}
       </svg>
       <motion.div {...pop(0)} className={`${card} absolute left-1/2 top-1/2 w-[38%] -translate-x-1/2 -translate-y-1/2 p-3 text-center`}>
-        <div className="mx-auto grid size-9 place-items-center rounded-full bg-navy font-display italic text-[#f3e6c4]">ck</div>
+        <div className="mx-auto grid size-9 place-items-center rounded-full bg-navy font-display font-semibold tracking-tight text-[#f3e6c4]">ck</div>
         <p className="mt-2 text-[11px] font-medium text-ink">Engineer approves</p>
         <p className="font-mono text-[9px] text-muted">human in the loop</p>
       </motion.div>

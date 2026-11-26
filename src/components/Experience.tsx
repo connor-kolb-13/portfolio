@@ -10,7 +10,7 @@ export default function Experience() {
           label="Experience"
           title={
             <span id="experience-title">
-              Enterprise rigor, <em className="italic text-brass">small-shop</em> speed.
+              Enterprise rigor, <em className="text-brass">small-shop</em> speed.
             </span>
           }
           aside="I learned delivery inside a professional services firm and apply it everywhere else: design first, document everything, hand over cleanly."

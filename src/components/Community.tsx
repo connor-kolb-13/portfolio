@@ -10,7 +10,7 @@ export default function Community() {
           label="Community"
           title={
             <span id="community-title">
-              Built for the people <em className="italic text-brass">next door.</em>
+              Built for the people <em className="text-brass">next door.</em>
             </span>
           }
         />
