@@ -50,11 +50,12 @@
 @theme {
   --font-display: var(--display-family);
   --font-sans: var(--body-family);
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
-  --radius-3xl: 1.75rem;
-  --radius-pill: 9999px;
+  --spacing: 0.23rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.625rem;
+  --radius-3xl: 0.875rem;
+  --radius-pill: 0.5rem;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --color-bg: var(--bg);
@@ -114,103 +115,22 @@ body {
 }
 
 /* ------------------------------------------------------------------
-   Type and style knobs. Defaults are the live site: Geist, Editorial.
-   The preview's Customize panel sets data-font and data-style on <html>.
+   Type and layout knobs: Sora headlines and body, Enterprise style
+   (tighter spacing, small corners, wide container, quiet atmosphere).
 ------------------------------------------------------------------- */
 :root {
-  --display-family: "Geist", ui-sans-serif, system-ui, sans-serif;
-  --body-family: "Geist", ui-sans-serif, system-ui, sans-serif;
-  --display-weight: 500;
-  --display-tracking: -0.042em;
-  --display-variation: normal;
-  --em-style: normal;
-  --container: 1240px;
-  --aurora: 1;
-  --grid: 0.6;
-  --grain-mult: 1;
-  --eyebrow-family: var(--font-mono);
-  --eyebrow-tracking: 0.16em;
-}
-
-:root[data-font="inter-tight"] {
-  --display-family: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
-  --body-family: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
-  --display-weight: 600;
-  --display-tracking: -0.03em;
-}
-:root[data-font="manrope"] {
-  --display-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --body-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --display-weight: 650;
-  --display-tracking: -0.026em;
-}
-:root[data-font="jakarta"] {
-  --display-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --body-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --display-weight: 650;
-  --display-tracking: -0.026em;
-}
-:root[data-font="sora"] {
   --display-family: "Sora", ui-sans-serif, system-ui, sans-serif;
   --body-family: "Sora", ui-sans-serif, system-ui, sans-serif;
   --display-weight: 500;
   --display-tracking: -0.04em;
-}
-:root[data-font="hanken"] {
-  --display-family: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --body-family: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --display-weight: 600;
-  --display-tracking: -0.03em;
-}
-
-/* Styles: density (spacing scale), rounding, width and atmosphere. */
-:root[data-style="enterprise"] {
-  --spacing: 0.23rem;
-  --radius-lg: 0.375rem;
-  --radius-xl: 0.5rem;
-  --radius-2xl: 0.625rem;
-  --radius-3xl: 0.875rem;
-  --radius-pill: 0.5rem;
+  --display-variation: normal;
+  --em-style: normal;
   --container: 1320px;
   --aurora: 0.45;
   --grid: 0.3;
   --grain-mult: 0;
   --eyebrow-family: var(--font-sans);
   --eyebrow-tracking: 0.1em;
-}
-:root[data-style="studio"] {
-  --spacing: 0.29rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1.125rem;
-  --radius-2xl: 1.5rem;
-  --radius-3xl: 2.25rem;
-  --container: 1180px;
-  --aurora: 1.25;
-  --grid: 0;
-}
-:root[data-style="swiss"] {
-  --radius-lg: 0;
-  --radius-xl: 0;
-  --radius-2xl: 0;
-  --radius-3xl: 0;
-  --radius-pill: 0;
-  --container: 1280px;
-  --aurora: 0;
-  --grid: 0.9;
-  --grain-mult: 0;
-  --eyebrow-family: var(--font-sans);
-  --eyebrow-tracking: 0.12em;
-}
-:root[data-style="compact"] {
-  --spacing: 0.2rem;
-  --radius-lg: 0.375rem;
-  --radius-xl: 0.5rem;
-  --radius-2xl: 0.75rem;
-  --radius-3xl: 1rem;
-  --container: 1360px;
-  --aurora: 0.6;
-  --grid: 0.4;
-  --grain-mult: 0.5;
 }
 
 .display {

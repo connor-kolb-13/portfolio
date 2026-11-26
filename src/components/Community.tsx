@@ -17,7 +17,7 @@ export default function Community() {
         <div className="mt-16 grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
             <blockquote className="display relative text-[clamp(1.6rem,3vw,2.5rem)] leading-[1.18] text-ink">
-              <span aria-hidden className="absolute -left-2 -top-8 font-display text-7xl text-brass/50 sm:-left-8">
+              <span aria-hidden className="absolute -left-1 -top-9 font-display text-7xl text-brass/50">
                 “
               </span>
               {community.quote}
