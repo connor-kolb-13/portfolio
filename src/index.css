@@ -108,26 +108,13 @@ body {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
-/* Headline type. Clean sans is the default; the preview can switch
-   to the serif or grotesk options with data-font on <html>. */
+/* Headline type: Geist, set tight. */
 :root {
   --display-family: "Geist", "Inter", ui-sans-serif, system-ui, sans-serif;
   --display-weight: 500;
   --display-tracking: -0.042em;
   --display-variation: normal;
   --em-style: normal;
-}
-:root[data-font="serif"] {
-  --display-family: "Instrument Serif", ui-serif, Georgia, serif;
-  --display-weight: 400;
-  --display-tracking: -0.012em;
-  --em-style: italic;
-}
-:root[data-font="grotesk"] {
-  --display-family: "Bricolage Grotesque", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --display-weight: 650;
-  --display-tracking: -0.04em;
-  --display-variation: "opsz" 96;
 }
 
 .display {
