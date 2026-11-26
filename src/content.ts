@@ -77,15 +77,15 @@ export const profile = {
   email: 'connor@phasezerolabsllc.com',
   linkedin: 'https://www.linkedin.com/in/connor-kolb-16b581155/',
   github: 'https://github.com/connor-kolb-13',
-  studio: { name: 'Phase Zero Labs', url: 'https://phasezerolabsllc.com' },
+  studio: { name: 'PhaseZero Labs', url: 'https://phasezerolabsllc.com' },
 }
 
 export const hero = {
-  kicker: 'Data and AI engineer · Founder, Phase Zero Labs',
+  kicker: 'Data and AI engineer · Founder, PhaseZero Labs',
   headline: ['I build practical AI', 'that changes how', 'businesses', 'actually run.'],
   emphasis: 'actually run.',
   lede:
-    'By day I engineer data platforms, automation and AI agents for companies at Capital Data. On my own time I run Phase Zero Labs, a small studio that builds software for local operators, and I do pro bono work for the communities I belong to.',
+    'By day I engineer data platforms, automation and AI agents for companies at Capital Data. On my own time I run PhaseZero Labs, a small studio that builds software for local operators, and I do pro bono work for the communities I belong to.',
 }
 
 export const capabilities = [
@@ -302,7 +302,7 @@ export const cases: CaseStudy[] = [
     title: 'Nexus: an AI chief of staff with a gate on every action',
     short: 'Nexus',
     sector: 'Small business operations',
-    context: 'Phase Zero Labs, my own studio',
+    context: 'PhaseZero Labs, my own studio',
     role: 'Founder, architect and sole engineer',
     timeline: '2026 to present',
     outcome: 'An AI chief of staff and an agent build team that run a one-person studio, inside limits the owner sets.',
@@ -679,7 +679,7 @@ export const experience = [
     body: 'Professional services delivery across data platforms, infrastructure automation, BI, web apps and AI agents, with 688 pull requests in my first year. My documentation deck became the firm standard. Started as an architecture intern and associate architect before moving into engineering.',
   },
   {
-    org: 'Phase Zero Labs',
+    org: 'PhaseZero Labs',
     role: 'Founder and President',
     when: 'Present',
     body: 'A West Palm Beach studio building full-stack web products and internal tools for small and mid-size operators.',
